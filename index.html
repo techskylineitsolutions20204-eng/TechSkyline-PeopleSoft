@@ -11,6 +11,14 @@
         body { font-family: 'Inter', sans-serif; }
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(8px); }
         .gradient-text { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @keyframes highlight-fade {
+            0% { background-color: rgba(59, 130, 246, 0.2); transform: scale(1.02); }
+            100% { background-color: transparent; transform: scale(1); }
+        }
+        .section-highlight {
+            animation: highlight-fade 1.5s ease-out;
+        }
     </style>
 <script type="importmap">
 {

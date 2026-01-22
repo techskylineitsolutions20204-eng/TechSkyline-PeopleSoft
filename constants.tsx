@@ -14,7 +14,7 @@ import {
   ShieldCheck,
   Zap
 } from 'lucide-react';
-import { LearningModule, ModuleCategory, ContactInfo } from './types';
+import { LearningModule, ModuleCategory, ContactInfo, LearningSource, Difficulty, CloudLabStep } from './types';
 
 export const TECHSKYLINE_CONTACT: ContactInfo = {
   name: "Abhinav Joseph",
@@ -24,11 +24,69 @@ export const TECHSKYLINE_CONTACT: ContactInfo = {
   email: "techskylineitsolutions20204@gmail.com"
 };
 
-const ORACLE_GLOBAL_ENVIRONMENTS = [
+export const ORACLE_GLOBAL_ENVIRONMENTS = [
   { label: 'Oracle LiveLabs Home', url: 'https://livelabs.oracle.com/ords/r/dbpm/livelabs/home', description: 'Interactive workshop platform for PeopleSoft and OCI.' },
   { label: 'Access Lab Environment', url: 'https://learn.oracle.com/ols/course/request-and-access-your-lab-environment/61268/69492', description: 'Official portal to request hands-on PeopleSoft sandboxes.' },
   { label: 'Oracle LiveLabs GitHub', url: 'https://github.com/oracle-livelabs/oci', description: 'Automation scripts and resources for OCI-based labs.' },
   { label: 'PeopleSoft Info Portal', url: 'https://docs.oracle.com/cd/E52319_01/infoportal/index.html', description: 'The comprehensive knowledge base for all PeopleSoft versions.' }
+];
+
+export const GLOBAL_LEARNING_SOURCES: LearningSource[] = [
+  {
+    title: 'Oracle Free On-Demand Training',
+    description: 'Official video tutorials covering basic PeopleSoft architecture and component navigation.',
+    url: 'https://docs.oracle.com/cd/E52319_01/infoportal/training.html',
+    difficulty: Difficulty.BEGINNER,
+    category: 'Official',
+    topics: ['Feature Overviews', 'PeopleSoft Now!', 'Intro to PeopleTools']
+  },
+  {
+    title: 'Oracle PeopleSoft Training Center',
+    description: 'The official landing page for all structured Oracle PeopleSoft education.',
+    url: 'https://www.oracle.com/in/education/training/peoplesoft/',
+    difficulty: Difficulty.INTERMEDIATE,
+    category: 'Official',
+    topics: ['Certification Paths', 'Role-based training', 'Official Curriculum']
+  },
+  {
+    title: 'SpearMC Webinars & Live Training',
+    description: 'Expert-led sessions and webinars covering real-world PeopleSoft scenarios.',
+    url: 'https://spearmc.com/events/',
+    difficulty: Difficulty.ADVANCED,
+    category: 'Community',
+    topics: ['Optimization', 'Cloud Hosting', 'Testing Frameworks']
+  },
+  {
+    title: 'PeopleSoft PeopleCode Guide',
+    description: 'Technical deep-dive into PeopleSoft proprietary scripting language (PeopleCode).',
+    url: 'https://docs.oracle.com/cd/E52319_01/infoportal/index.html',
+    difficulty: Difficulty.INTERMEDIATE,
+    category: 'Technical',
+    topics: ['Events', 'Field Logic', 'OO PeopleCode']
+  },
+  {
+    title: 'PeopleSoft Query Manager Guide',
+    description: 'Comprehensive guide for building data extraction queries and reports.',
+    url: 'https://docs.oracle.com/cd/E52319_01/infoportal/index.html',
+    difficulty: Difficulty.INTERMEDIATE,
+    category: 'Technical',
+    topics: ['SQL Joins', 'Filtering', 'Prompt Tables']
+  },
+  {
+    title: 'YouTube - PeopleSoft Beginners',
+    description: 'Visual demonstrations of menu navigation and basic administration tasks.',
+    url: 'https://www.youtube.com/results?search_query=peoplesoft+tutorial+for+beginners',
+    difficulty: Difficulty.BEGINNER,
+    category: 'Video',
+    topics: ['UI Navigation', 'Admin Basics', 'Component Setup']
+  }
+];
+
+export const CLOUD_LAB_STEPS: CloudLabStep[] = [
+  { title: 'Secure Cloud Credits', description: 'Leverage $300 GCP credits or OCI Always Free Tier resources.' },
+  { title: 'Setup Compute VM', description: 'Provision a high-performance VM on OCI or Google Cloud Engine.' },
+  { title: 'Deploy Stack', description: 'Install App Server, Web Server, and Database using Oracle BYOL docs.' },
+  { title: 'Architecture Verification', description: 'Validate networking, connectivity, and performance scaling.' }
 ];
 
 export const PEOPLESOFT_MODULES: LearningModule[] = [

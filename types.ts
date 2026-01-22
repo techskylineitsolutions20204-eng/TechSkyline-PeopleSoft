@@ -6,6 +6,12 @@ export enum ModuleCategory {
   REPORTING = 'Reporting & Analytics'
 }
 
+export enum Difficulty {
+  BEGINNER = 'Beginner',
+  INTERMEDIATE = 'Intermediate',
+  ADVANCED = 'Advanced'
+}
+
 export interface ExternalLink {
   label: string;
   url: string;
@@ -29,6 +35,20 @@ export interface PseudoLab {
 export interface OfficialLab {
   label: string;
   url: string;
+  description: string;
+}
+
+export interface LearningSource {
+  title: string;
+  description: string;
+  url: string;
+  difficulty: Difficulty;
+  category: 'Official' | 'Community' | 'Technical' | 'Video';
+  topics?: string[];
+}
+
+export interface CloudLabStep {
+  title: string;
   description: string;
 }
 
